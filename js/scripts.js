@@ -72,31 +72,31 @@ $(document).ready(function(){
             var total = 0;
 
 
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Crispy"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Crispy"){
         total = 1200;    
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Crispy"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Crispy"){
         total = 950;
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Crispy"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Crispy"){
         total = 750;
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Stuffed"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Stuffed"){
         total = 1500; 
     }       
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Stuffed"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Stuffed"){
         total = 1000;
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Stuffed"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Stuffed"){
         total = 950;
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Gluten free"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Gluten free"){
         total = 1500;
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Gluten free"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Gluten free"){
         total = 1000;
     }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta (Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Gluten free"){
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Gluten free"){
         total = 950;
     }
     if(yourToppings == "Extra meat" || yourToppings == "Extra veggies" || yourToppings == "Extra cheese"){
