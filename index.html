@@ -31,10 +31,9 @@
       <p></p>
     </div>
     <br>
-
-    <!-- <section id="pizza-order"> -->
-    <h3>Place your order here</h3>
+    
     <div class="row">
+      <h3>Place your order here</h3>
       <div class="col-md-6">
         <form id="order">
           <div class="form-group">
@@ -42,40 +41,32 @@
             <input type="text" class="form-control" id="new-first-name">
           </div>
           <br>
-          <!-- <div class="form-group">
-            <label for="new-last-name">Last name:</label>
-            <input type="text" class="form-control" id="new-last-name">
-          </div> -->
-          <br>
           <div class="pizza-type">
             <h4>Pizza type:</h4>
-            <select class="form-control">
-              <option>Haiwaiian</option>
-              <option>Pepporoni</option>
-              <option>Meat Deluxe</option>
-              <option>Italian Fiesta(Fan favorite)</option>
-              <option>Vegeterian</option>
+            <select class="form-control" id="p-type">
+              <option >Hawaiian</option>
+              <option >Pepporoni</option>
+              <option >Meat Deluxe</option>
+              <option >Italian Fiesta(Fan favorite)</option>
+              <option >Vegeterian</option>
             </select>
           </div>
           <br>
           <div id="new-order">
-            <div class="checkbox-inline">
+            <div class="checkbox size">
               <h4>Size</h4>
               <label class="checkbox-inline">
-                <input type="checkbox" id="small" value="option1"> Small
-              </label>
+                <input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>
               <label class="checkbox-inline">
-                <input type="checkbox" id="medium" value="option2"> Medium
-              </label>
+                <input type="checkbox" id="medium" value="medium" class="size" name = "pizza-size">Medium</label>
               <label class="checkbox-inline">
-                <input type="checkbox" id="large" value="option3"> Large
-              </label>
+                <input type="checkbox" id="large" value="large" class="size" name= "pizza-size">Large</label>
             </div>
             <br>
 
             <div class="toppings">
               <h4>Toppings</h4>
-              <select class="form-control">
+              <select class="form-control" id="top">
                 <option>Extra cheese</option>
                 <option>Extra meat</option>
                 <option>Extra veggies</option>
@@ -85,7 +76,7 @@
 
             <div class="crust">
               <h4>Type of crust</h4>
-              <select class="form-control">
+              <select class="form-control" id="crust">
                 <option>Crispy</option>
                 <option>Stuffed</option>
                 <option>Glutten free</option>
@@ -94,15 +85,15 @@
             <br>
             <div id="delivery">
               <h4>Delivery</h4>
-              <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="deliver" value="option1"> deliver
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="not-deliver" value="option2"> Pick up
-              </label>
-              <br>
+              <select class="form-control" id="delivery-method">
+                <option>Delivery</option>
+                <option>Pick up</option>
+              </select>
+              <br> <br>
             </div>
           </div>
+
+          <span class="o"></span>
 
           <span class="btn btn-primary" id="add-order">Add Order</span>
 
@@ -110,7 +101,6 @@
         </form>
       </div>
     </div>
-    <!-- </section> -->
 
 
 
