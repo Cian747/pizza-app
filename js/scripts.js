@@ -66,6 +66,7 @@ $(document).ready(function(){
             yourToppings = $('#top').val(),
             theCrust = $('#crust').val(),
             yourDel = $("#delivery-method").val(),
+            
             newPizza = new Pizza(inputedFirstName,pizzaType,yourSize,yourToppings,theCrust,yourDel);
             console.log(newPizza);
 
