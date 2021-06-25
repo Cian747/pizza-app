@@ -39,14 +39,17 @@ $(document).ready(function(){
                                             '<input type="checkbox" id="large" value="large" name = "pizza-size">Large</label>' +
                                     '</div>' +
                                     '<br>' +
-                                    '<div class="toppings">' +
-                                        '<h4>Toppings</h4>' +
-                                        '<select class="form-control">' +
-                                            '<option>Extra cheese</option>' +
-                                            '<option>Extra meat</option>' +
-                                            '<option>Extra veggies</option>' +
-                                        '</select>' +
+                                    '<div id="new-order">' +
+                                     '<div class="checkbox size">'+
+                                        '<h4>Size</h4>' +
+                                        '<label class="checkbox-inline">' +
+                                            '<input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>' +
+                                        '<label class="checkbox-inline">' +
+                                            '<input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>' +
+                                        '<label class="checkbox-inline">' +
+                                            '<input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>' +
                                     '</div>' +
+                                    '<br>' +
                                     '<br>' +
                                     '<div class="crust">' +
                                         '<h4>Type of Crust' +
