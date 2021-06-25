@@ -5,9 +5,10 @@
 Pancho's pizza is a new restaurant in France that is creating an faster way to get your favorite pizza'z chosen a nd brought to your doorstep. 
 ## Setup/Installation Requirements
 * Fork code to your git repo.
-``
+```
 git clone https://github.com/Cian747/pizza-app.git
-``
+
+```
 * Open files on your editor and edit to your preference.
 * Create a gh-pages branch.
 * push your gh-pages to you repo and deploy site.
