@@ -7,6 +7,9 @@
     background-size: cover;
     background-position:center;
 }
+#welcome h1{
+    font-size: 30px;
+}
 #message{
     text-align: center;
     position: absolute;
@@ -23,7 +26,7 @@
 }
 #about h2{
     text-align: center;
-    border: 1px solid black;
+    text-decoration: underline;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -35,7 +38,7 @@
 }
 #where-it-began h2{
     text-align: center;
-    border: 1px solid black;
+    text-decoration: underline;
     padding: 10px;
     top: 50%;
     left: 50%;
@@ -52,6 +55,14 @@
     /* text-decoration: underline; */
     margin:0;
 }
-#portfolio{
+#choice{
     text-align: center;
+    padding: 50px;
+}
+.polaroid{
+    border: 1px solid #ccc;
+}
+#toppings{
+    text-align: center;
+    padding: 50px;
 }
