@@ -17,12 +17,41 @@
     font-size: 30px;
 }
 #about{
-    font-size: 15px;
+    font-size: 18px;
     padding: 50px;
+    text-align: center;
 }
 #about h2{
     text-align: center;
     border: 1px solid black;
     padding: 10px;
-    margin: 3px;
+    box-sizing: border-box;
+}
+#where-it-began{
+    font-size: 18px;
+    padding: auto;
+    text-align: center;
+    background-color:whitesmoke;
+}
+#where-it-began h2{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    margin:inherit;
+}
+.header{
+    text-align: center;
+    background-color: rgb(29, 25, 25);
+    color: whitesmoke;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    padding: 20px;
+    /* border: 5px solid white; */
+    /* text-decoration: underline; */
+    margin:0;
+}
+#portfolio{
+    text-align: center;
 }
