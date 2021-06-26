@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.6.0.js"></script>
@@ -22,9 +25,8 @@
     </div>
     <section id="welcome">
       <div id="message">
-        <h1>Pancho</h1>
+        <h1 style="font-family: 'Pacifico', cursive;">Pancho</h1>
         <q>Pizza a la francaise.</q> <br><br>
-        <!-- <div id="icon"><img src="icons/mouse_click.png" alt=""></div> -->
       </div>
     </section>
     <div class="row">
@@ -121,64 +123,63 @@
     </section>
     <section>
       <form id="order">
-        <h3 style="text-align: center;">Place your order here</h3>
-          <div class="form-group">
-            <label for="new-first-name">First name:</label>
-            <input type="text" class="form-control" id="new-first-name">
+        <h3 style="text-align: center; text-decoration: underline">Order Up!</h3>
+        <div class="form-group">
+          <label for="new-first-name" style="font-family: Pacifico;">First name:</label>
+          <input type="text" class="form-control" id="new-first-name">
+        </div>
+        <br>
+        <div class="pizza-type">
+          <h3>Pizza type:</h3>
+          <select class="form-control" id="p-type">
+            <option>Hawaiian</option>
+            <option>Pepporoni</option>
+            <option>Meat Deluxe</option>
+            <option>Italian Fiesta(Fan favorite)</option>
+            <option>Vegeterian</option>
+          </select>
+        </div>
+        <br>
+        <div id="new-order">
+          <div class="checkbox size">
+            <h3>Size</h3>
+            <label class="checkbox">
+              <input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>
+            <label class="checkbox">
+              <input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>
+            <label class="checkbox">
+              <input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>
           </div>
           <br>
-          <div class="pizza-type">
-            <h4>Pizza type:</h4>
-            <select class="form-control" id="p-type">
-              <option>Hawaiian</option>
-              <option>Pepporoni</option>
-              <option>Meat Deluxe</option>
-              <option>Italian Fiesta(Fan favorite)</option>
-              <option>Vegeterian</option>
-            </select>
+          <div class="toppings">
+            <h3>Toppings</h3>
+            <label class="checkbox">
+              <input type="checkbox" id="small" value="Extra-cheese" class="size" name="pizza-topping">Extra
+              cheese</label>
+            <label class="checkbox">
+              <input type="checkbox" id="medium" value="Extra-meat" class="size" name="pizza-topping">Extra
+              Meat</label>
+            <label class="checkbox">
+              <input type="checkbox" id="large" value="Extra-veggies" class="size" name="pizza-topping">Extra
+              veggies</label>
           </div>
-          <br>
-          <div id="new-order">
-            <div class="checkbox size">
-              <h4>Size</h4>
-              <label class="checkbox">
-                <input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>
-              <label class="checkbox">
-                <input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>
-              <label class="checkbox">
-                <input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>
-            </div>
-            <br>
-            <div class="toppings">
-              <h4>Toppings</h4>
-              <label class="checkbox">
-                <input type="checkbox" id="small" value="Extra-cheese" class="size" name="pizza-topping">Extra
-                cheese</label>
-              <label class="checkbox">
-                <input type="checkbox" id="medium" value="Extra-meat" class="size" name="pizza-topping">Extra
-                Meat</label>
-              <label class="checkbox">
-                <input type="checkbox" id="large" value="Extra-veggies" class="size" name="pizza-topping">Extra
-                veggies</label>
-            </div>
-          </div>
-          <br>
-          <div class="crust">
-            <h4>Type of crust</h4>
-            <select class="form-control" id="crust">
-              <option>Crispy</option>
-              <option>Stuffed</option>
-              <option>Glutten free</option>
-            </select>
-          </div>
-          <br>
-          <div id="delivery">
-            <h4>Delivery</h4>
-            <select class="form-control" id="delivery-method">
-              <option>delivered</option>
-              <option>picked-up</option>
-            </select>
-          </div>
+        </div>
+        <br>
+        <div class="crust">
+          <h3>Type of crust</h3>
+          <select class="form-control" id="crust">
+            <option>Crispy</option>
+            <option>Stuffed</option>
+            <option>Glutten free</option>
+          </select>
+        </div>
+        <br>
+        <div id="delivery">
+          <h3>Delivery</h3>
+          <select class="form-control" id="delivery-method">
+            <option>delivered</option>
+            <option>picked-up</option>
+          </select>
         </div>
         <br><br>
         <span class="btn btn-primary" id="add-order">Add Order</span>
@@ -186,9 +187,9 @@
       </form>
     </section>
 
-     <h2 id="output"></h2>
+    <h2 id="output"></h2>
     <section class="footer-text-center" id="footer">
-
+      <img src="icons/you_tube.png" alt="">
     </section>
   </div>
 </body>

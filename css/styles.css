@@ -7,8 +7,8 @@
     background-size: cover;
     background-position:center;
 }
-#welcome h1{
-    font-size: 30px;
+ h1{
+    font-size: 50px;
 }
 #message{
     text-align: center;
@@ -33,11 +33,11 @@
 }
 #where-it-began{
     font-size: 18px;
-    padding: auto;
+    padding: 20px;
+    color:whitesmoke;
     text-align: center;
-    background-color:whitesmoke;
-    background-size: 100% 100%;
-    background-position: center;
+    background-image:url(../background/tamara-gak-SQLOsc0HGDI-unsplash.jpg);
+    background-size: cover;
 }
 #where-it-began h2{
     text-align: center;
@@ -78,6 +78,42 @@ div.polaroid {
     padding: 80px;
 }
 #order{
-    background-image: url(../background/Easy\ whole\ wheat\ walnut\ –\ raisin\ bread\ \(Vegan\).jpeg);
+    background-image: url(../background/shaian-ramesht-exSEmuA7R7k-unsplash.jpg);
+    background-size: cover;
     color:white;
+    padding: 50px;
+}
+h2{
+    font-family: 'Pacifico', cursive;
+} 
+h3{
+    font-family: 'Pacifico',cursive;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#delivery-method{
+    background-color:transparent;
+}
+
+#crust{
+    background-color:transparent;
+}
+
+#p-type{
+    background-color:transparent;
+}
+
+#new-first-name{
+    background-color:transparent;
+}
+#output{
+    background-color: rgb(29, 25, 25);
+    color:white;
+}
+#footer{
+    box-align: center;
+    padding:20px;
 }
