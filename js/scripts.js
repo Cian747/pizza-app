@@ -16,8 +16,7 @@ function Pizza(first,pizza,size,crust,delivery){
 
 $(document).ready(function(){
     $("#add-order").click(function(){
-        $('#new-order').append(
-                            '<div class="pizza-type">'+
+        $('#new-order').append('<div class="pizza-type">'+
                                 '<h4>Pizza type:</h4>' +
                                     '<select class="form-control">' +
                                         '<option>Haiwaiian</option>' +
@@ -41,13 +40,13 @@ $(document).ready(function(){
                                     '<br>' +
                                     '<div id="new-order">' +
                                      '<div class="checkbox size">'+
-                                        '<h4>Size</h4>' +
+                                        '<h4>Toppings</h4>' +
                                         '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>' +
+                                            '<input type="checkbox" id="small" value="Extra cheese" class="size" name="pizza-topping1">Cheese</label>' +
                                         '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>' +
+                                            '<input type="checkbox" id="medium" value="Extra meat" class="size" name="pizza-tppping2">Meat</label>' +
                                         '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>' +
+                                            '<input type="checkbox" id="large" value="Extra veggies" class="size" name="pizza-topping3">Veggies</label>' +
                                     '</div>' +
                                     '<br>' +
                                     '<br>' +
@@ -66,7 +65,7 @@ $(document).ready(function(){
         var inputedFirstName = $('#new-first-name').val(),
             pizzaType = $('#p-type').val(),
             yourSize = $("input[name ='pizza-size']:checked").val(),
-            yourToppings = $("input[name ='pizza-topping']:checked").val(),
+            yourToppings =  $("input[name='pizza-topping']:checked").val(),
             theCrust = $('#crust').val(),
             yourDel = $("#delivery-method").val(),
             
@@ -76,9 +75,9 @@ $(document).ready(function(){
 
             var total = 0;
 
-    // if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Crispy"){
-    //     total = 1200;    
-    // }
+    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" && yourSize == "Large" || theCrust == "Crispy"){
+        total = 1200;    
+    }
     if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" && yourSize == "Medium" || theCrust == "Crispy"){
         total = 950;
     }
@@ -107,10 +106,10 @@ $(document).ready(function(){
         total = total + 300;
     }
     else if(yourDel == "Delivery"){
-        total = total + 100;
+        alert(total = total + 100);
     }
     // alert("Hi " + newPizza.firstName + " we have received your order and it is being processed.");
     // alert(" Your order is " + newPizza + " and this totals to " + total);
-    alert(total);
+    alert(newPizza.firstName);
     });
 });

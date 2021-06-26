@@ -1,5 +1,5 @@
 #welcome{
-    background-image: url(../background/shaian-ramesht-exSEmuA7R7k-unsplash.jpg);
+    background-image: url(../background/ivan-torres-MQUqbmszGGM-unsplash.jpg);
     text-align: center;
     color:white;
     height: 500px;
@@ -23,6 +23,7 @@
     font-size: 18px;
     padding: 50px;
     text-align: center;
+    background-color:whitesmoke;
 }
 #about h2{
     text-align: center;
@@ -35,6 +36,8 @@
     padding: auto;
     text-align: center;
     background-color:whitesmoke;
+    background-size: 100% 100%;
+    background-position: center;
 }
 #where-it-began h2{
     text-align: center;
@@ -59,10 +62,22 @@
     text-align: center;
     padding: 50px;
 }
-.polaroid{
+.col-md-3{
     border: 1px solid #ccc;
+    padding: 20px;
+}
+.col-md-3 img{
+    width: 100%;
+    height: auto;
+}
+div.polaroid {
+    padding: 15px;
 }
 #toppings{
     text-align: center;
-    padding: 50px;
+    padding: 80px;
+}
+#order{
+    background-image: url(../background/Easy\ whole\ wheat\ walnut\ –\ raisin\ bread\ \(Vegan\).jpeg);
+    color:white;
 }
