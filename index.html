@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pancho's Pizza</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.6.0.js"></script>
@@ -65,7 +65,8 @@
     <div id="choice">
       <div class="row">
         <div class="col-md-3" id="hawaii">
-          <img src="images/Hawaiian BBQ Pizza - Life Made Simple.jpeg" alt="hawaiian" width="600" height="400" class="img-fluid">
+          <img src="images/Hawaiian BBQ Pizza - Life Made Simple.jpeg" alt="hawaiian" width="600" height="400"
+            class="img-fluid">
           <div id="hawa-back" class="polaroid">
             <p>Hawaiian</p>
           </div>
@@ -76,14 +77,16 @@
             <p>Meat Deluxe</p>
           </div>
         </div>
-        <div class="col-md-3" id="italy" >
-          <img src="images/Homemade Margherita Pizza Recipe.jpeg" alt="italian" class="img-fluid" width="600" height="400">
+        <div class="col-md-3" id="italy">
+          <img src="images/Homemade Margherita Pizza Recipe.jpeg" alt="italian" class="img-fluid" width="600"
+            height="400">
           <div id="italy-back" class="polaroid">
             <p>Italian Fiesta - KSH 1000</p>
           </div>
         </div>
         <div class="col-md-3" id="mush">
-          <img src="images/Balsamic Roasted Mushrooms with Kale Mashed Potatoes - Budget Bytes.jpeg" width="600" height="400" class="img-fluid">
+          <img src="images/Balsamic Roasted Mushrooms with Kale Mashed Potatoes - Budget Bytes.jpeg" width="600"
+            height="400" class="img-fluid">
           <div id="pep-back" class="polaroid">
             <p>Vegeterian - KSH 950</p>
           </div>
@@ -94,13 +97,14 @@
       <div class="row">
         <h2>TOPPINGS</h2>
         <div class="col-md-4" id="cheese-top">
-          <img src="images/Three Cheese Pesto Spinach Flatbread Pizza Recipe - Peas and Crayons.jpeg" alt="" class="img-fluid">
+          <img src="images/Three Cheese Pesto Spinach Flatbread Pizza Recipe - Peas and Crayons.jpeg" alt=""
+            class="img-fluid">
           <div id="cheese-back">
             <p>CHEESE - KSH 100</p>
           </div>
         </div>
         <div class="col-md-4" id="meat">
-          <img src="images/EASY BBQ Chicken Pizza Recipe - I Heart Naptime.jpeg" alt="" class="img-fluid" width ="100%">
+          <img src="images/EASY BBQ Chicken Pizza Recipe - I Heart Naptime.jpeg" alt="" class="img-fluid" width="100%">
           <div id="meat-back">
             <p>PROTEIN - KSH 80</p>
           </div>
@@ -112,95 +116,80 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
 
-  </section>
-
-  <div class="row">
-    <h3 style="text-align: center;">Place your order here</h3>
-    <div class="col-md-6">
+    </section>
+    <section>
       <form id="order">
-        <div class="form-group">
-          <label for="new-first-name">First name:</label>
-          <input type="text" class="form-control" id="new-first-name">
-        </div>
-        <br>
-        <div class="pizza-type">
-          <h4>Pizza type:</h4>
-          <select class="form-control" id="p-type">
-            <option>Hawaiian</option>
-            <option>Pepporoni</option>
-            <option>Meat Deluxe</option>
-            <option>Italian Fiesta(Fan favorite)</option>
-            <option>Vegeterian</option>
-          </select>
-        </div>
-        <br>
-        <div id="new-order">
-          <div class="checkbox size">
-            <h4>Size</h4>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>
+        <h3 style="text-align: center;">Place your order here</h3>
+          <div class="form-group">
+            <label for="new-first-name">First name:</label>
+            <input type="text" class="form-control" id="new-first-name">
           </div>
           <br>
-
-          <div class="toppings">
-            <h4>Toppings</h4>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="small" value="Extra-cheese" class="size" name="pizza-topping">Extra
-              cheese</label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="medium" value="Extra-meat" class="size" name="pizza-topping">Extra
-              Meat</label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="large" value="Extra-veggies" class="size" name="pizza-topping">Extra
-              veggies</label>
+          <div class="pizza-type">
+            <h4>Pizza type:</h4>
+            <select class="form-control" id="p-type">
+              <option>Hawaiian</option>
+              <option>Pepporoni</option>
+              <option>Meat Deluxe</option>
+              <option>Italian Fiesta(Fan favorite)</option>
+              <option>Vegeterian</option>
+            </select>
+          </div>
+          <br>
+          <div id="new-order">
+            <div class="checkbox size">
+              <h4>Size</h4>
+              <label class="checkbox">
+                <input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>
+              <label class="checkbox">
+                <input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>
+              <label class="checkbox">
+                <input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>
+            </div>
+            <br>
+            <div class="toppings">
+              <h4>Toppings</h4>
+              <label class="checkbox">
+                <input type="checkbox" id="small" value="Extra-cheese" class="size" name="pizza-topping">Extra
+                cheese</label>
+              <label class="checkbox">
+                <input type="checkbox" id="medium" value="Extra-meat" class="size" name="pizza-topping">Extra
+                Meat</label>
+              <label class="checkbox">
+                <input type="checkbox" id="large" value="Extra-veggies" class="size" name="pizza-topping">Extra
+                veggies</label>
+            </div>
+          </div>
+          <br>
+          <div class="crust">
+            <h4>Type of crust</h4>
+            <select class="form-control" id="crust">
+              <option>Crispy</option>
+              <option>Stuffed</option>
+              <option>Glutten free</option>
+            </select>
+          </div>
+          <br>
+          <div id="delivery">
+            <h4>Delivery</h4>
+            <select class="form-control" id="delivery-method">
+              <option>delivered</option>
+              <option>picked-up</option>
+            </select>
           </div>
         </div>
-        <br>
+        <br><br>
+        <span class="btn btn-primary" id="add-order">Add Order</span>
+        <button type="submit" class="btn btn-danger">Proceed to Checkout</button>
+      </form>
+    </section>
 
-        <div class="crust">
-          <h4>Type of crust</h4>
-          <select class="form-control" id="crust">
-            <option>Crispy</option>
-            <option>Stuffed</option>
-            <option>Glutten free</option>
-          </select>
-        </div>
-        <br>
-        <div id="delivery">
-          <h4>Delivery</h4>
-          <select class="form-control" id="delivery-method">
-            <option>Delivery</option>
-            <option>Pick up</option>
-          </select>
-        </div>
-    </div>
-    <br><br>
-    <button type="submit" class="btn btn-danger">Checkout</button>
-    </form>
-    <span class="btn btn-primary" id="add-order">Add Order</span>
+     <h2 id="output"></h2>
+    <section class="footer-text-center" id="footer">
 
-    
-  </div>
-  </div>
-
-
-
-  <div class="col-md-6">
-    <ul class="order-info">
-
-    </ul>
-
-  </div>
-
-  <section class="footer-text-center" id="footer">
-
-  </section>
+    </section>
   </div>
 </body>
 

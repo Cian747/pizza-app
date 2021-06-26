@@ -11,6 +11,14 @@ function Pizza(first,pizza,size,crust,delivery){
     };
   }
 
+  Pizza.prototype.fullOrder = function(){
+      return  "Hello " + this.firstName + " your order is " + this.pizzaType + ", " + this.size + " size, with " + this.toppings + " and " + this.crust + " crust, " + this.deliveryMethod ;
+}
+function resetFields(){
+    $('#new-first-name').val("");
+    $("input[name ='pizza-size']:checked").val("");
+    $("input[name='pizza-topping']:checked").val(""); 
+}
 
 // user interface
 
@@ -105,11 +113,15 @@ $(document).ready(function(){
     else if(yourToppings == "Extra meat" || yourToppings == "Extra veggies" || yourToppings == "Extra cheese"){
         total = total + 300;
     }
-    else if(yourDel == "Delivery"){
+    else if(yourDel == "Delivered"){
         alert(total = total + 100);
     }
     // alert("Hi " + newPizza.firstName + " we have received your order and it is being processed.");
     // alert(" Your order is " + newPizza + " and this totals to " + total);
-    alert(newPizza.firstName);
+    alert(newPizza.fullOrder());
+    alert("Your order will arrive shortly")
+
+    $("#output").text(newPizza.fullOrder());
     });
+
 });
