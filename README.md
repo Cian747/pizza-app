@@ -1,6 +1,6 @@
 # PANCHO'S
 #### Order your Pizza at Pancho's today, 2021
-#### By **C1AN**
+#### By **CIAN**
 ## Description
 Pancho's pizza is a new restaurant in France that is creating an faster way to get your favorite pizza'z chosen a nd brought to your doorstep. 
 ## Setup/Installation Requirements
