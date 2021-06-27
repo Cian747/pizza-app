@@ -61,10 +61,39 @@
     text-align: center;
     padding: 50px;
 }
-.col-md-3{
+/* .col-md-3{
     border: 1px solid #ccc;
     padding: 20px;
+} */
+
+#hawa-back,#Deluxe-back,#italy-back,#pep-back{
+    display: none;
+    font-family: fantasy;
+    font-style: italic;
+    position: relative;
+    font-size: 20px;
 }
+
+#hawaii img:hover{
+    filter:brightness(60%);
+    cursor:pointer;
+}
+
+#meat-deluxe img:hover{
+    filter:brightness(60%);
+    cursor:pointer;
+}
+
+#italy img:hover{
+    filter:brightness(60%);
+    cursor:pointer;
+}
+
+#mush img:hover{
+    filter:brightness(60%);
+    cursor:pointer;
+}
+
 .col-md-3 img{
     width: 100%;
     height: auto;
@@ -74,7 +103,7 @@ div.polaroid {
 }
 #toppings{
     text-align: center;
-    padding: 80px;
+    padding: 50px;
 }
 #order{
     background-image: url(../background/shaian-ramesht-exSEmuA7R7k-unsplash.jpg);

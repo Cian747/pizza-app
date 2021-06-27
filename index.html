@@ -58,7 +58,7 @@
     <br>
 
     </section class="portfolio">
-    <h2 style="text-align: center;">CHOICES OF THE DAY</h2>
+    <h2 style="text-align: center; text-decoration: underline;">CHOICES OF THE DAY</h2>
     <div id="choice">
       <div class="row">
         <div class="col-md-3" id="hawaii">
@@ -78,14 +78,14 @@
           <img src="images/Homemade Margherita Pizza Recipe.jpeg" alt="italian" class="img-fluid" width="600"
             height="400">
           <div id="italy-back" class="polaroid">
-            <p>Italian Fiesta - KSH 1000</p>
+            <p>Italian Fiesta</p>
           </div>
         </div>
         <div class="col-md-3" id="mush">
           <img src="images/Pizza with salami and mushrooms by liskina-nora on….jpeg" width="600" height="400"
             class="img-fluid">
           <div id="pep-back" class="polaroid">
-            <p>Vegeterian - KSH 950</p>
+            <p>Vegeterian</p>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@
           </div>
         </div>
         <div class="col-md-3" id="veggies">
-          <img src="images/Extra Veggies.png" alt="" class="img-fluid">
+          <img src="images/Extra Veggies.png" alt="" class="img-fluid" width="400" height="400">
           <div id="veggie-back">
             <p>VEGGIES - KSH 150</p>
           </div>
@@ -127,6 +127,7 @@
         <div class="pizza-type">
           <h3>Pizza type:</h3>
           <select class="form-control" id="p-type">
+            <option value="">Select your flavour</option>
             <option>Hawaiian</option>
             <option>Pepporoni</option>
             <option>Meat Deluxe</option>
@@ -136,26 +137,26 @@
         </div>
         <br>
         <div id="new-order">
-          <div class="checkbox size">
+          <div class="form-group">
             <h3>Size</h3>
-            <label class="checkbox">
-              <input type="checkbox" id="small" value="small" class="size" name="pizza-size">Small</label>
-            <label class="checkbox">
-              <input type="checkbox" id="medium" value="medium" class="size" name="pizza-size">Medium</label>
-            <label class="checkbox">
-              <input type="checkbox" id="large" value="large" class="size" name="pizza-size">Large</label>
+            <select class="form-control" id="size">
+              <option value="">Select size</option>
+              <option value="1000">Large</option>
+              <option value="850">Medium</option>
+              <option value="550">Small</option>
+            </select>
           </div>
-          <br>
+          <br> 
           <div class="toppings">
             <h3>Toppings</h3>
             <label class="checkbox">
-              <input type="checkbox" id="small" value="Extra-cheese" class="size" name="pizza-topping">Extra
+              <input type="checkbox" id="small" value="100" class="size" name="pizza-topping">Extra
               cheese</label>
             <label class="checkbox">
-              <input type="checkbox" id="medium" value="Extra-meat" class="size" name="pizza-topping">Extra
+              <input type="checkbox" id="medium" value="80" class="size" name="pizza-topping">Extra
               Meat</label>
             <label class="checkbox">
-              <input type="checkbox" id="large" value="Extra-veggies" class="size" name="pizza-topping">Extra
+              <input type="checkbox" id="large" value="150" class="size" name="pizza-topping">Extra
               veggies</label>
           </div>
         </div>
@@ -163,19 +164,23 @@
         <div class="crust">
           <h3>Type of crust</h3>
           <select class="form-control" id="crust">
-            <option>Crispy</option>
-            <option>Stuffed</option>
-            <option>Glutten free</option>
+            <option value="">Pick a crust</option>
+            <option value="150">Crispy</option>
+            <option value="130">Stuffed</option>
+            <option value="200">Glutten free</option>
           </select>
         </div>
         <br>
         <div id="delivery">
           <h3>Delivery</h3>
           <select class="form-control" id="delivery-method">
+            <option value="">What delivery method</option>
             <option>delivered</option>
             <option>picked-up</option>
           </select>
         </div>
+        <br>
+        <span class="another-form"></span>
         <br><br>
         <span class="btn btn-primary" id="add-order">Add Order</span>
         <button type="submit" class="btn btn-danger">Proceed to Checkout</button>

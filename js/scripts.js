@@ -6,10 +6,7 @@ function Pizza(first,pizza,size,crust,delivery){
     this.toppings = [];
     this.crust = crust;
     this.deliveryMethod = delivery;
-    this.order = function(){
-      return this.firstName + " the order will be delivered at your doorstep. Thanks for choosing us!"
-    };
-  }
+  };
 
   Pizza.prototype.fullOrder = function(){
       return  "Hello " + this.firstName + " your order is " + this.pizzaType + ", " + this.size + " size, with " + this.toppings + " and " + this.crust + " crust, " + this.deliveryMethod ;
@@ -24,7 +21,7 @@ function resetFields(){
 
 $(document).ready(function(){
     $("#add-order").click(function(){
-        $('#new-order').append('<div class="pizza-type">'+
+        $('.another-form').append('<div class="pizza-type">'+
                                 '<h4>Pizza type:</h4>' +
                                     '<select class="form-control">' +
                                         '<option>Haiwaiian</option>' +
@@ -35,16 +32,15 @@ $(document).ready(function(){
                                     '</select>' +
                                 '</div>' +
                                 '<br>' +
-                                '<div id="new-order">' +
-                                    '<div class="checkbox-inline">' +
-                                        ' <h4>Size</h4>' +
-                                        '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="small" value="small" name = "pizza-size">Small</label>' +
-                                        '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="medium" value="medium" name = "pizza-size">Medium</label>' +
-                                        '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="large" value="large" name = "pizza-size">Large</label>' +
-                                    '</div>' +
+                                '<div class="form-group">' +
+                                    '<h3>Size</h3>' +
+                                    '<select class="form-control" id="size">' +
+                                        '<option value="">Select size</option>' +
+                                        '<option value="1000">Large</option>'+
+                                        '<option value="850">Medium</option>'+
+                                        '<option value="550">Small</option> '+
+                                    '</select>'+
+                                '</div>' +
                                     '<br>' +
                                     '<div id="new-order">' +
                                      '<div class="checkbox size">'+
@@ -65,6 +61,14 @@ $(document).ready(function(){
                                                 '<option>Stuffed</option>' +
                                                 '<option>Glutten free</option>' + 
                                             '</select>' +
+                                    '</div>' +
+                                    '<br>' +
+                                    '<div id="delivery">' +
+                                      '<h3>Delivery</h3>' +
+                                      '<select class="form-control" id="delivery-method">' +
+                                        '<option>delivered</option>' +
+                                        '<option>picked-up</option>' +
+                                      '</select>' +
                                     '</div>')
     });
 
@@ -72,56 +76,50 @@ $(document).ready(function(){
         event.preventDefault();
         var inputedFirstName = $('#new-first-name').val(),
             pizzaType = $('#p-type').val(),
-            yourSize = $("input[name ='pizza-size']:checked").val(),
-            yourToppings =  $("input[name='pizza-topping']:checked").val(),
-            theCrust = $('#crust').val(),
+            yourSize =  parseInt($("#size").val()),
+            yourToppings = [],
+            theCrust = parseInt($('#crust').val()),
             yourDel = $("#delivery-method").val(),
             
             newPizza = new Pizza(inputedFirstName,pizzaType,yourSize,theCrust,yourDel);
-            newPizza.toppings.push(yourToppings);
             console.log(newPizza);
 
-            var total = 0;
+            var x = 0;
 
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" && yourSize == "Large" || theCrust == "Crispy"){
-        total = 1200;    
-    }
-    if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" && yourSize == "Medium" || theCrust == "Crispy"){
-        total = 950;
-    }
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Crispy"){
-    //     total = 750;
-    // }
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Stuffed"){
-    //     total = 1500; 
-    // }       
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Stuffed"){
-    //     total = 1000;
-    // }
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Stuffed"){
-    //     total = 950;
-    // }
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Large" || theCrust == "Gluten free"){
-    //     total = 1500;
-    // }
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Medium" || theCrust == "Gluten free"){
-    //     total = 1000;
-    // }
-    // else if(pizzaType == "Hawaiian" || pizzaType == "Pepporoni" || pizzaType == "Meat Deluxe" || pizzaType == "Italian Fiesta(Fan favorite)" || pizzaType == "Vegeterian" || yourSize == "Small" || theCrust == "Gluten free"){
-    //     total = 950;
-    // }
-    else if(yourToppings == "Extra meat" || yourToppings == "Extra veggies" || yourToppings == "Extra cheese"){
-        total = total + 300;
-    }
-    else if(yourDel == "Delivered"){
+            $("input[name='pizza-topping']:checked").each(function(){
+                yourToppings.push($(this).val())
+                x = x + $(this).val();
+            });
+            newPizza.toppings.push(yourToppings);
+
+
+            var total = (yourSize) + (x) + (theCrust);
+            alert(total)
+
+            resetFields();
+
+
+    if(yourDel == "delivered"){
         alert(total = total + 100);
     }
-    // alert("Hi " + newPizza.firstName + " we have received your order and it is being processed.");
-    // alert(" Your order is " + newPizza + " and this totals to " + total);
-    alert(newPizza.fullOrder());
-    alert("Your order will arrive shortly")
+    alert(total);
 
     $("#output").text(newPizza.fullOrder());
     });
 
+    $('#meat-deluxe').hover(function(){
+        $('#Deluxe-back').toggle();
+    });
+
+    $('#hawaii').hover(function(){
+        $('#hawa-back').toggle();
+    });
+
+    $('#italy').hover(function(){
+        $('#italy-back').toggle();
+    });
+
+    $('#mush').hover(function(){
+        $('#pep-back').toggle();
+    });
 });
