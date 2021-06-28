@@ -93,14 +93,15 @@ $(document).ready(function(){
             newPizza.toppings.push(yourToppings);
 
 
-            var total = (yourSize) + (x) + (theCrust);
+            var total = parseInt(yourSize) + (x) + parseInt(theCrust);
             alert(total)
 
             resetFields();
 
 
     if(yourDel == "delivered"){
-        alert(total = total + 100);
+        total = total + 100;
+        alert(total);
     }
     alert(total);
 
@@ -121,5 +122,17 @@ $(document).ready(function(){
 
     $('#mush').hover(function(){
         $('#pep-back').toggle();
+    });
+
+    $('#cheese-top').hover(function(){
+        $('#cheese-back').toggle();
+    });
+
+    $('#meat').hover(function(){
+        $('#meat-back').toggle();
+    });
+
+    $('#veggies').hover(function(){
+        $('#veggie-back').toggle();
     });
 });
