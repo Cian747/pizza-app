@@ -104,7 +104,6 @@ $(document).ready(function(){
 
 
             var newOrder = new Order(yourSize, yourToppings,theCrust);
-            // alert(total)
 
             resetFields();
 
