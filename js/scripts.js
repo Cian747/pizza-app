@@ -9,7 +9,17 @@ function Pizza(first,pizza,size,crust,delivery){
   };
 
   Pizza.prototype.fullOrder = function(){
-      return  "Hello " + this.firstName + " your order is " + this.pizzaType + ", " + this.size + " size, with " + this.toppings + " and " + this.crust + " crust, " + this.deliveryMethod ;
+      return  "Hello " + this.firstName + " your order is " + this.pizzaType + ", " + this.size + " size, with " + this.toppings + " for toppings and " + this.crust + " for crust. To be " + this.deliveryMethod ;
+}
+
+function Order(sizeCost,toppingCost,crustCost) {
+    this.size = sizeCost;
+    this.toppings = toppingCost;
+    this.crust = crustCost;
+}
+
+Order.prototype.finalCost = function(){
+    return this.size + this.toppings + this.crust;
 }
 function resetFields(){
     $('#new-first-name').val("");
@@ -36,9 +46,9 @@ $(document).ready(function(){
                                     '<h3>Size</h3>' +
                                     '<select class="form-control" id="size">' +
                                         '<option value="">Select size</option>' +
-                                        '<option value="1000">Large</option>'+
-                                        '<option value="850">Medium</option>'+
-                                        '<option value="550">Small</option> '+
+                                        '<option value="1000">Large - KSH 1000</option>'+
+                                        '<option value="850">Medium - KSH 850</option>'+
+                                        '<option value="550">Small - KSH 550</option> '+
                                     '</select>'+
                                 '</div>' +
                                     '<br>' +
@@ -46,20 +56,20 @@ $(document).ready(function(){
                                      '<div class="checkbox size">'+
                                         '<h4>Toppings</h4>' +
                                         '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="small" value="Extra cheese" class="size" name="pizza-topping1">Cheese</label>' +
+                                            '<input type="checkbox" id="cheddar" value="Extra cheese" class="size" name="pizza-topping1">Cheese - KSH 100</label>' +
                                         '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="medium" value="Extra meat" class="size" name="pizza-tppping2">Meat</label>' +
+                                            '<input type="checkbox" id="nyama" value="Extra meat" class="size" name="pizza-tppping2">Meat - KSH 80</label>' +
                                         '<label class="checkbox-inline">' +
-                                            '<input type="checkbox" id="large" value="Extra veggies" class="size" name="pizza-topping3">Veggies</label>' +
+                                            '<input type="checkbox" id="green" value="Extra veggies" class="size" name="pizza-topping3">Veggies - KSH 150</label>' +
                                     '</div>' +
                                     '<br>' +
                                     '<br>' +
                                     '<div class="crust">' +
                                         '<h4>Type of Crust' +
                                             '<select class="form-control">' +
-                                                '<option>Crispy</option>' +
-                                                '<option>Stuffed</option>' +
-                                                '<option>Glutten free</option>' + 
+                                                '<option>Crispy - KSH 150</option>' +
+                                                '<option>Stuffed - KSH 130</option>' +
+                                                '<option>Glutten free - KSH 200</option>' + 
                                             '</select>' +
                                     '</div>' +
                                     '<br>' +
@@ -93,17 +103,18 @@ $(document).ready(function(){
             newPizza.toppings.push(yourToppings);
 
 
-            var total = parseInt(yourSize) + (x) + parseInt(theCrust);
-            alert(total)
+            var newOrder = new Order(yourSize, yourToppings,theCrust);
+            // alert(total)
 
             resetFields();
 
 
     if(yourDel == "delivered"){
-        total = total + 100;
-        alert(total);
+        alert("Delivery will cost you an extra KSH 100")
     }
-    alert(total);
+    alert(newOrder.finalCost());
+
+
 
     $("#output").text(newPizza.fullOrder());
     });
