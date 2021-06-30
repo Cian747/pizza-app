@@ -9,7 +9,7 @@ function Pizza(first,pizza,size,crust,delivery){
   };
 
   Pizza.prototype.fullOrder = function(){
-      return  "Hello " + this.firstName + " your order is " + this.pizzaType + ", " + this.size + " size, with " + this.toppings + " for toppings and " + this.crust + " for crust. To be " + this.deliveryMethod ;
+    return  "Hello " + this.firstName + " your order is " + this.pizzaType + ", " + this.size + " size, with " + this.toppings + " for toppings and " + this.crust + " for crust. To be " + this.deliveryMethod ;
 }
 
 function Order(sizeCost,toppingCost,crustCost) {
@@ -19,7 +19,11 @@ function Order(sizeCost,toppingCost,crustCost) {
 }
 
 Order.prototype.finalCost = function(){
-    return this.size + this.toppings + this.crust;
+    var toppingCost = 0;
+    this.toppings.forEach(function(topping){
+        toppingCost += parseInt(topping)
+    }) 
+    return this.size + toppingCost + this.crust;
 }
 function resetFields(){
     $('#new-first-name').val("");
@@ -82,7 +86,7 @@ $(document).ready(function(){
                                     '</div>')
     });
 
-    $("form#order").submit(function(){
+    $("form#order").submit(function(event){
         event.preventDefault();
         var inputedFirstName = $('#new-first-name').val(),
             pizzaType = $('#p-type').val(),
@@ -92,7 +96,9 @@ $(document).ready(function(){
             yourDel = $("#delivery-method").val(),
             
             newPizza = new Pizza(inputedFirstName,pizzaType,yourSize,theCrust,yourDel);
-            console.log(newPizza);
+            
+
+           
 
             var x = 0;
 
@@ -101,7 +107,6 @@ $(document).ready(function(){
                 x = x + $(this).val();
             });
             newPizza.toppings.push(yourToppings);
-
 
             var newOrder = new Order(yourSize, yourToppings,theCrust);
 
